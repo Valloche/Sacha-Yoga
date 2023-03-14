@@ -1,16 +1,4 @@
-import Link from 'next/link';
-import { getPosts } from '../utils/mdx-utils';
 
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Layout, { GradientBackground } from '../components/Layout';
-import ArrowIcon from '../components/ArrowIcon';
-import { getGlobalData } from '../utils/global-data';
-import SEO from '../components/SEO';
-
-export default function Index({ posts, globalData }) {
-  return (
-    <Layout>
       <main>
        <h1 style="text-align: center;">Bienvenue sur le site de Sacha Yoga</h1>
 <p>&nbsp;</p>
@@ -19,10 +7,4 @@ export default function Index({ posts, globalData }) {
 <p>Si vous &ecirc;tes int&eacute;ress&eacute; par le yoga et que vous souhaitez en savoir plus sur ses bienfaits, Sachayogablog est un excellent point de d&eacute;part. N'h&eacute;sitez pas &agrave; visiter leur site web pour d&eacute;couvrir leurs articles et leurs sessions de yoga en ligne.</p>
 
   </main>
-export function getStaticProps() 
-{
-  const posts = getPosts();
-  const globalData = getGlobalData();
 
-  return { props: { posts, globalData } };
-}
